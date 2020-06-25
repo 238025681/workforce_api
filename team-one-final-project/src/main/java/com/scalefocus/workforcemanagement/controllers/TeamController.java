@@ -177,9 +177,10 @@ public class TeamController {
     }
 
     @Operation(
-            description = "Adds a member in the teams"
+            description = "Adds a members in the teams"
             , tags = {"teams"}
-            , security = {@SecurityRequirement(name = "bearer-key")})
+            , security = {@SecurityRequirement(name = "bearer-key")}
+            , summary = "Add a user in a team")
     @ApiResponses(value = {
             @ApiResponse(
                     responseCode = "200"
@@ -201,9 +202,10 @@ public class TeamController {
     }
 
     @Operation(
-            description = "Removes a member in the teams"
+            description = "Removes a members in the teams"
             , tags = {"teams"}
-            , security = {@SecurityRequirement(name = "bearer-key")})
+            , security = {@SecurityRequirement(name = "bearer-key")}
+            , summary = "Remove a user from a team")
     @ApiResponses(value = {
             @ApiResponse(
                     responseCode = "200"

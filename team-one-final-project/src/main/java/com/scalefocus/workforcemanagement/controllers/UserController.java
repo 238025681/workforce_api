@@ -85,10 +85,8 @@ public class UserController {
                     , content = @Content(mediaType = "application/json", schema = @Schema()))})
     @GetMapping
     public Page<UserResponseDTO> getAll(
-            @Parameter(description = "Page number",example = "0", hidden = true)
             @RequestParam(name = "page", required = false, defaultValue = DEFAULT_PAGE)
                     Integer page,
-            @Parameter(description = "Page size",example = "10", hidden = true)
             @RequestParam(name = "size", required = false, defaultValue = DEFAULT_PAGE_SIZE)
                     Integer size ) {
 
